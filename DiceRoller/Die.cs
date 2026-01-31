@@ -10,10 +10,14 @@ namespace DiceRoller;
 /// </summary>
 /// <remarks>The <see cref="Die"/> class models a standard die, allowing 
 /// the number of sides to be specified. This can be used for games, 
-/// Random number generation, or other scenarios requiring dice rolls.
+/// random number generation, or other scenarios requiring dice rolls.
 /// </remarks>
 public class Die
 {
+	private static readonly Random rand = new();
+
+
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Die"/> class
 	/// with the specified number of sides.
@@ -51,7 +55,6 @@ public class Die
 	/// sides of the die, inclusive</returns>
 	public byte Roll()
 	{
-		Random rand = new();
 		FaceUpValue = Convert.ToByte(rand.Next(1, NumberOfSides + 1));
 
 		return FaceUpValue;
