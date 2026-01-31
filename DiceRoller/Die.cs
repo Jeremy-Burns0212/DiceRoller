@@ -14,9 +14,8 @@ namespace DiceRoller;
 /// </remarks>
 public class Die
 {
+	private const byte MaxSides = 20;
 	private static readonly Random rand = new();
-
-
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Die"/> class
@@ -28,7 +27,7 @@ public class Die
 	/// <exception cref="ArgumentOutOfRangeException">Thrown when invalid number of sides is provided</exception>
 	public Die(byte numSides)
 	{
-        if (numSides == 0 || numSides > 20)
+        if (numSides == 0 || numSides > MaxSides)
 		{
 			throw new ArgumentOutOfRangeException(nameof(numSides)
 				, $"{nameof(numSides)} must be greater than 0 and less than 21");
