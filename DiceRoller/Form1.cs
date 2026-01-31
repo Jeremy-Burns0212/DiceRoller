@@ -4,7 +4,7 @@ namespace DiceRoller
     {
         public Form1()
         {
-            InitializeComponent();
+			InitializeComponent();
         }
     }
 }
