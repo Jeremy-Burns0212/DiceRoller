@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DiceRoller;
+﻿namespace DiceRoller;
 
 /// <summary>
 /// Represents a die used in games or simulations,
@@ -22,7 +18,7 @@ public class Die
 	/// with the specified number of sides.
 	/// </summary>
 	/// <param name="numSides">
-	/// The number of sides for the die. Must be greater than zero.
+	/// The number of sides for the die. Must be greater than zero and up to <see cref="MaxSides"/>.
 	/// </param>
 	/// <exception cref="ArgumentOutOfRangeException">Thrown when invalid number of sides is provided</exception>
 	public Die(byte numSides)
